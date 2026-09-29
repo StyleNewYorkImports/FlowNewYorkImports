@@ -2076,6 +2076,41 @@ async function destroyCardBrick() {
   cardBrickAmount = null;
 }
 
+function getPaymentErrorMessage(result = {}) {
+  const payment = result?.transactions?.payments?.[0] || {};
+  const code = String(
+    payment.status_detail ||
+    result.status_detail ||
+    result.code ||
+    result.error ||
+    result.cause?.[0]?.code ||
+    result.cause?.[0]?.description ||
+    ""
+  ).toLowerCase();
+
+  const messages = [
+    [["insufficient_amount", "insufficient_funds"], "Saldo ou limite insuficiente no cartão."],
+    [["bad_filled_card_data", "invalid_card_number", "bad_filled_card_number"], "Confira o número e os dados do cartão."],
+    [["bad_filled_date", "invalid_expiration_date"], "Confira a data de validade do cartão."],
+    [["bad_filled_security_code", "invalid_security_code"], "Confira o código de segurança (CVV)."],
+    [["bad_filled_other", "invalid_cardholder"], "Confira o nome do titular e os demais dados do cartão."],
+    [["invalid_document", "invalid_identification"], "Confira o CPF/documento do titular."],
+    [["invalid_installments", "max_installments"], "O número de parcelas selecionado não é permitido. Escolha outra opção."],
+    [["rejected_by_issuer", "cc_rejected_call_for_authorize"], "Pagamento recusado pelo banco emissor. O titular pode contatar o banco ou usar outro cartão."],
+    [["high_risk", "cc_rejected_high_risk"], "Pagamento recusado pela análise de segurança do Mercado Pago."],
+    [["card_disabled"], "Cartão desabilitado. O titular deve verificar com o banco."],
+    [["expired_card"], "Cartão vencido. Confira a validade ou use outro cartão."],
+    [["duplicated_payment"], "Pagamento duplicado. Confira se a cobrança anterior já foi realizada."],
+    [["max_attempts"], "Limite de tentativas atingido. Aguarde antes de tentar novamente."],
+    [["pending_contingency", "pending_review_manual"], "Pagamento em análise pelo Mercado Pago."]
+  ];
+
+  for (const [keys, message] of messages) {
+    if (keys.some(key => code.includes(key))) return message;
+  }
+  return "O pagamento foi recusado. Confira os dados do cartão ou tente outro cartão.";
+}
+
 async function renderMercadoPagoCardBrick() {
   const amount = Number(getTotals().total.toFixed(2));
   if (!amount || !$("cardPaymentBrick_container")) return;
@@ -2141,7 +2176,7 @@ async function renderMercadoPagoCardBrick() {
             const result = await response.json();
 
             if (!response.ok) {
-              throw new Error(result.message || result.error || "Pagamento não pôde ser processado.");
+              throw new Error(getPaymentErrorMessage(result));
             }
 
             const payment = result?.transactions?.payments?.[0];
@@ -2156,7 +2191,7 @@ async function renderMercadoPagoCardBrick() {
             } else if (["processing", "action_required", "created"].includes(status)) {
               setCardStatus("processing", "Pagamento em análise", "A confirmação pode levar alguns instantes. Não tente pagar novamente.");
             } else {
-              setCardStatus("error", "Pagamento não aprovado", detail || "Tente outro cartão ou revise os dados.");
+              setCardStatus("error", "Pagamento não aprovado", getPaymentErrorMessage(result));
             }
             resolve();
           } catch (err) {
