@@ -52,7 +52,7 @@
   <main>
     <section class="hero" id="inicio">
       <div class="hero-media">
-        <img src="Jaquetas/Jaqueta Lacoste azul.jpeg" alt="" class="hero-image">
+        <img src="jaqueta.jpg" alt="" class="hero-image">
       </div>
       <div class="hero-shade"></div>
       <div class="hero-content">
@@ -197,11 +197,10 @@
       <div class="checkout-steps"><span class="step active" data-step="1">1 Pagamento</span><span class="step" data-step="2">2 Entrega</span></div>
 
       <section id="paymentStep" class="checkout-step">
-        <div class="checkout-title"><span class="eyebrow">PAGAMENTO SEGURO</span><h2>Escolha como pagar</h2><p>Pix ou cartão pelo Checkout Transparente do Mercado Pago. Dados sensíveis do cartão não são armazenados pela loja.</p></div>
+        <div class="checkout-title"><span class="eyebrow">PAGAMENTO SEGURO</span><h2>Escolha como pagar</h2><p>Pague via Pix pelo QR Code ou chave informada abaixo.</p></div>
 
         <div class="payment-tabs">
           <button type="button" class="payment-tab active" data-method="pix">Pix</button>
-          <button type="button" class="payment-tab" data-method="card">Cartão</button>
         </div>
 
         <div class="payment-grid">
@@ -216,16 +215,6 @@
                 <div class="pix-key"><input id="pixCodeInput" value="stylenewyorkimports@gmail.com" readonly><button id="copyPixBtn">Copiar</button></div>
                 <p class="pix-security">Frete grátis para todo o Brasil. Depois do pagamento, clique em <b>Já fiz o pagamento</b>.</p>
               </div>
-            </div>
-
-            <div id="cardPaymentPanel" class="payment-method-panel">
-              <div class="mp-secure-head">
-                <div><strong>Cartão de crédito ou débito</strong><span>Pagamento processado com segurança pelo Mercado Pago</span></div>
-                <span class="secure-pill">🔒 Seguro</span>
-              </div>
-              <div id="cardPaymentBrick_container"></div>
-              <div id="cardPaymentStatus" class="payment-status hidden"></div>
-              <p class="mp-note">Seus dados de cartão são processados pelo Mercado Pago e não ficam armazenados nesta loja.</p>
             </div>
           </div>
 
@@ -266,7 +255,6 @@
     <img id="lightboxImage" alt="Imagem ampliada">
   </div>
   <div class="toast" id="toast"></div>
-  <script src="https://sdk.mercadopago.com/js/v2"></script>
   <script src="script.js"></script>
 </body>
 </html>
