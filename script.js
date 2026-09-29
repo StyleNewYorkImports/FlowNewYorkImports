@@ -2078,37 +2078,57 @@ async function destroyCardBrick() {
 
 function getPaymentErrorMessage(result = {}) {
   const payment = result?.transactions?.payments?.[0] || {};
-  const code = String(
+  const rawParts = [
+    payment.status_detail,
+    payment.status,
+    result.status_detail,
+    result.code,
+    result.error,
+    result.message,
+    result.cause?.[0]?.code,
+    result.cause?.[0]?.description,
+    result.errors?.[0]?.code,
+    result.errors?.[0]?.message,
+    result.details?.[0]?.code,
+    result.details?.[0]?.description
+  ].filter(Boolean).map(String);
+  const code = rawParts.join(" ").toLowerCase();
+
+  const rules = [
+    [["bad_filled_security_code","invalid_security_code","cc_rejected_bad_filled_security_code"], "CVV/código de segurança incorreto. Confira os 3 ou 4 dígitos do cartão."],
+    [["bad_filled_date","invalid_expiration_date","cc_rejected_bad_filled_date","expired_card","cc_rejected_card_expired"], "Validade do cartão incorreta ou cartão vencido. Confira mês e ano."],
+    [["invalid_card_number","bad_filled_card_number","cc_rejected_bad_filled_card_number"], "Número do cartão inválido. Confira os números digitados."],
+    [["invalid_identification","invalid_document","bad_filled_identification"], "CPF/documento do titular inválido. Confira o documento informado."],
+    [["invalid_cardholder","bad_filled_cardholder","cardholder_name"], "Confira o nome do titular exatamente como informado para o cartão."],
+    [["insufficient_amount","insufficient_funds","cc_rejected_insufficient_amount"], "Saldo ou limite insuficiente para concluir este pagamento."],
+    [["invalid_installments","max_installments","installments_not_allowed"], "Parcelamento não permitido para este cartão. Escolha outra quantidade de parcelas."],
+    [["card_disabled","cc_rejected_card_disabled"], "Cartão desabilitado para esta compra. O titular deve verificar com o banco."],
+    [["rejected_by_issuer","cc_rejected_call_for_authorize"], "Pagamento recusado pelo banco emissor. O titular pode autorizar a compra com o banco ou usar outro cartão."],
+    [["high_risk","cc_rejected_high_risk"], "Pagamento recusado pela análise de segurança do Mercado Pago."],
+    [["duplicated_payment","cc_rejected_duplicated_payment"], "Foi identificada uma tentativa de pagamento duplicada. Confira se a compra anterior já foi cobrada."],
+    [["max_attempts","cc_rejected_max_attempts"], "Limite de tentativas atingido. Aguarde antes de tentar novamente."],
+    [["pending_contingency","pending_review_manual"], "Pagamento em análise pelo Mercado Pago. Aguarde a confirmação antes de tentar novamente."],
+    [["bad_filled_card_data","bad_filled_other"], "Algum dado do cartão não foi aceito. Confira número, nome do titular, validade, CVV e CPF. O Mercado Pago não informou qual campo específico falhou."]
+  ];
+
+  for (const [keys, message] of rules) {
+    if (keys.some(key => code.includes(key))) return message;
+  }
+
+  return "Pagamento recusado. O Mercado Pago ou o banco não informou qual dado específico causou a recusa. Confira os dados ou tente outro cartão.";
+}
+
+function getPaymentDiagnosticCode(result = {}) {
+  const payment = result?.transactions?.payments?.[0] || {};
+  return String(
     payment.status_detail ||
     result.status_detail ||
     result.code ||
     result.error ||
     result.cause?.[0]?.code ||
-    result.cause?.[0]?.description ||
-    ""
-  ).toLowerCase();
-
-  const messages = [
-    [["insufficient_amount", "insufficient_funds"], "Saldo ou limite insuficiente no cartão."],
-    [["bad_filled_card_data", "invalid_card_number", "bad_filled_card_number"], "Confira o número e os dados do cartão."],
-    [["bad_filled_date", "invalid_expiration_date"], "Confira a data de validade do cartão."],
-    [["bad_filled_security_code", "invalid_security_code"], "Confira o código de segurança (CVV)."],
-    [["bad_filled_other", "invalid_cardholder"], "Confira o nome do titular e os demais dados do cartão."],
-    [["invalid_document", "invalid_identification"], "Confira o CPF/documento do titular."],
-    [["invalid_installments", "max_installments"], "O número de parcelas selecionado não é permitido. Escolha outra opção."],
-    [["rejected_by_issuer", "cc_rejected_call_for_authorize"], "Pagamento recusado pelo banco emissor. O titular pode contatar o banco ou usar outro cartão."],
-    [["high_risk", "cc_rejected_high_risk"], "Pagamento recusado pela análise de segurança do Mercado Pago."],
-    [["card_disabled"], "Cartão desabilitado. O titular deve verificar com o banco."],
-    [["expired_card"], "Cartão vencido. Confira a validade ou use outro cartão."],
-    [["duplicated_payment"], "Pagamento duplicado. Confira se a cobrança anterior já foi realizada."],
-    [["max_attempts"], "Limite de tentativas atingido. Aguarde antes de tentar novamente."],
-    [["pending_contingency", "pending_review_manual"], "Pagamento em análise pelo Mercado Pago."]
-  ];
-
-  for (const [keys, message] of messages) {
-    if (keys.some(key => code.includes(key))) return message;
-  }
-  return "O pagamento foi recusado. Confira os dados do cartão ou tente outro cartão.";
+    result.errors?.[0]?.code ||
+    "motivo_nao_informado"
+  );
 }
 
 async function renderMercadoPagoCardBrick() {
@@ -2174,6 +2194,12 @@ async function renderMercadoPagoCardBrick() {
               body: JSON.stringify(payload)
             });
             const result = await response.json();
+            console.info("Mercado Pago - resultado:", {
+              httpStatus: response.status,
+              orderStatus: result?.status || null,
+              paymentStatus: result?.transactions?.payments?.[0]?.status || null,
+              statusDetail: getPaymentDiagnosticCode(result)
+            });
 
             if (!response.ok) {
               throw new Error(getPaymentErrorMessage(result));
