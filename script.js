@@ -16,14 +16,14 @@ const CONFIG = {
 const PRODUCTS = [
   {
     "id": 1,
-    "name": "Produto teste — pagamento no cartão",
+    "name": "Camisa da 7Provas",
     "category": "Camisetas",
     "price": 3.00,
     "oldPrice": 3.00,
     "stock": 1,
     "sizes": ["Único"],
     "colors": ["Teste"],
-    "badge": "TESTE R$ 3",
+    "badge": "OFERTA",
     "image": "camiseta.jpg"
   },
   {
