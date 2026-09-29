@@ -1057,7 +1057,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto calvin klein.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 80,
@@ -1076,7 +1076,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto calvin klein-negro.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 81,
@@ -1095,7 +1095,7 @@ const PRODUCTS = [
       "Cinza"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto calvin klein-plomo.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 82,
@@ -1114,7 +1114,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto e7.negro.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 83,
@@ -1133,7 +1133,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto ea7-negro.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 84,
@@ -1152,7 +1152,7 @@ const PRODUCTS = [
       "Cinza"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto ea7-plomo.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 85,
@@ -1171,7 +1171,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto lac.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 86,
@@ -1190,7 +1190,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto lacoste.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 87,
@@ -1209,7 +1209,7 @@ const PRODUCTS = [
       "Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto short  blanco + camisa preta-.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 88,
@@ -1228,7 +1228,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto short + camisa- preta.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 89,
@@ -1247,7 +1247,7 @@ const PRODUCTS = [
       "Vermelho"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto short + camisa- rojo.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 90,
@@ -1266,7 +1266,7 @@ const PRODUCTS = [
       "Cinza"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto short branco + camisa cinza.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 91,
@@ -1285,7 +1285,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/conjunto short preto + camisa branca.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 92,
@@ -1304,7 +1304,7 @@ const PRODUCTS = [
       "Cinza"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/nike tech plomo.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 93,
@@ -1323,7 +1323,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/nike tech-negro.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 94,
@@ -1342,7 +1342,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/shor mas camisa (2).jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 95,
@@ -1361,7 +1361,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/shor mas camisa (3).jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 96,
@@ -1380,7 +1380,7 @@ const PRODUCTS = [
       "Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/shor mas camisa (4).jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 97,
@@ -1399,7 +1399,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/shor mas camisa (5).jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 98,
@@ -1418,7 +1418,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/shor mas camisa (6).jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 99,
@@ -1437,7 +1437,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/shor mas camisa (7).jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 100,
@@ -1456,7 +1456,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/shor mas camisa (8).jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 101,
@@ -1475,7 +1475,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/shor mas camisa (9).jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 102,
@@ -1494,7 +1494,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/shor mas camisa.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 103,
@@ -1513,7 +1513,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Conjuntos/short mas camisa.jpeg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 104,
@@ -1532,7 +1532,7 @@ const PRODUCTS = [
       "Azul Marinho"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Jaquetas/Jaqueta Lacoste azul.jpeg"
+    "image": "jaqueta.jpg"
   },
   {
     "id": 105,
@@ -1551,7 +1551,7 @@ const PRODUCTS = [
       "Cinza"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Jaquetas/Jaqueta lacoste cinza.jpeg"
+    "image": "jaqueta.jpg"
   },
   {
     "id": 106,
@@ -1570,7 +1570,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "Jaquetas/Jaqueta lacoste preta.jpeg"
+    "image": "jaqueta.jpg"
   }
 ];
 
