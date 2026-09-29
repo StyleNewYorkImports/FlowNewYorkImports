@@ -145,6 +145,17 @@ function serve(req, res) {
   });
 }
 const server = http.createServer(async (req, res) => {
+  const pathname = new URL(req.url, "http://localhost").pathname;
+
+  // Endpoint leve para o health check da hospedagem.
+  if ((req.method === "GET" || req.method === "HEAD") && pathname === "/health") {
+    res.writeHead(200, {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "no-store"
+    });
+    return res.end(req.method === "HEAD" ? undefined : "OK");
+  }
+
   if (req.method === "GET" && req.url === "/api/config") {
     return sendJson(res, MP_PUBLIC_KEY ? 200 : 503, { publicKey: MP_PUBLIC_KEY || null });
   }
@@ -152,4 +163,4 @@ const server = http.createServer(async (req, res) => {
   if (req.method === "POST" && req.url.startsWith("/api/webhooks/mercadopago")) return webhook(req, res);
   return serve(req, res);
 });
-server.listen(PORT, () => console.log(`FlowNewYork rodando na porta ${PORT}`));
+server.listen(PORT, "0.0.0.0", () => console.log(`FlowNewYork rodando na porta ${PORT}`));
