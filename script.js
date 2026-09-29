@@ -31,7 +31,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 10,
@@ -50,7 +50,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 11,
@@ -69,7 +69,7 @@ const PRODUCTS = [
       "Vermelho"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 12,
@@ -88,7 +88,7 @@ const PRODUCTS = [
       "Azul/Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 13,
@@ -107,7 +107,7 @@ const PRODUCTS = [
       "Verde/Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 14,
@@ -126,7 +126,7 @@ const PRODUCTS = [
       "Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 15,
@@ -145,7 +145,7 @@ const PRODUCTS = [
       "Azul/Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 16,
@@ -164,7 +164,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 17,
@@ -183,7 +183,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 18,
@@ -202,7 +202,7 @@ const PRODUCTS = [
       "Branco/Azul"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 19,
@@ -221,7 +221,7 @@ const PRODUCTS = [
       "Azul Marinho"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 20,
@@ -240,7 +240,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 21,
@@ -259,7 +259,7 @@ const PRODUCTS = [
       "Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 22,
@@ -278,7 +278,7 @@ const PRODUCTS = [
       "Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 23,
@@ -297,7 +297,7 @@ const PRODUCTS = [
       "Azul Marinho"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/jaqueta.jpg"
+    "image": "jaqueta.jpg"
   },
   {
     "id": 24,
@@ -316,7 +316,7 @@ const PRODUCTS = [
       "Azul"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 25,
@@ -335,7 +335,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/moletom.jpg"
+    "image": "moletom.jpg"
   },
   {
     "id": 26,
@@ -354,7 +354,7 @@ const PRODUCTS = [
       "Azul Marinho"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/moletom.jpg"
+    "image": "moletom.jpg"
   },
   {
     "id": 27,
@@ -373,7 +373,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/moletom.jpg"
+    "image": "moletom.jpg"
   },
   {
     "id": 28,
@@ -392,7 +392,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/moletom.jpg"
+    "image": "moletom.jpg"
   },
   {
     "id": 29,
@@ -411,7 +411,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/jaqueta.jpg"
+    "image": "jaqueta.jpg"
   },
   {
     "id": 30,
@@ -430,7 +430,7 @@ const PRODUCTS = [
       "Bege/Azul"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 31,
@@ -449,7 +449,7 @@ const PRODUCTS = [
       "Bege"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 32,
@@ -468,7 +468,7 @@ const PRODUCTS = [
       "Verde"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/jaqueta.jpg"
+    "image": "jaqueta.jpg"
   },
   {
     "id": 33,
@@ -487,7 +487,7 @@ const PRODUCTS = [
       "Azul/Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/jaqueta.jpg"
+    "image": "jaqueta.jpg"
   },
   {
     "id": 34,
@@ -506,7 +506,7 @@ const PRODUCTS = [
       "Azul/Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/camiseta.jpg"
+    "image": "camiseta.jpg"
   },
   {
     "id": 35,
@@ -525,7 +525,7 @@ const PRODUCTS = [
       "Branco/Azul"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/jaqueta.jpg"
+    "image": "jaqueta.jpg"
   },
   {
     "id": 36,
@@ -544,7 +544,7 @@ const PRODUCTS = [
       "Azul/Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/jaqueta.jpg"
+    "image": "jaqueta.jpg"
   },
   {
     "id": 37,
@@ -563,7 +563,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/moletom.jpg"
+    "image": "moletom.jpg"
   },
   {
     "id": 38,
@@ -582,7 +582,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/moletom.jpg"
+    "image": "moletom.jpg"
   },
   {
     "id": 40,
@@ -601,7 +601,7 @@ const PRODUCTS = [
       "Preto/Vermelho"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/moletom.jpg"
+    "image": "moletom.jpg"
   },
   {
     "id": 42,
@@ -620,7 +620,7 @@ const PRODUCTS = [
       "Preto/Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 43,
@@ -639,7 +639,7 @@ const PRODUCTS = [
       "Branco/Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 52,
@@ -658,7 +658,7 @@ const PRODUCTS = [
       "Branco/Preto/Verde"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 58,
@@ -677,7 +677,7 @@ const PRODUCTS = [
       "Vermelho"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 59,
@@ -696,7 +696,7 @@ const PRODUCTS = [
       "Verde/Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 60,
@@ -715,7 +715,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 62,
@@ -734,7 +734,7 @@ const PRODUCTS = [
       "Azul"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 63,
@@ -753,7 +753,7 @@ const PRODUCTS = [
       "Azul"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 64,
@@ -772,7 +772,7 @@ const PRODUCTS = [
       "Verde"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 65,
@@ -791,7 +791,7 @@ const PRODUCTS = [
       "Verde/Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 66,
@@ -810,7 +810,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 67,
@@ -829,7 +829,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 68,
@@ -848,7 +848,7 @@ const PRODUCTS = [
       "Preto/Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 69,
@@ -867,7 +867,7 @@ const PRODUCTS = [
       "Verde"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 70,
@@ -886,7 +886,7 @@ const PRODUCTS = [
       "Bege"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 71,
@@ -905,7 +905,7 @@ const PRODUCTS = [
       "Preto/Verde"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 72,
@@ -924,7 +924,7 @@ const PRODUCTS = [
       "Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 73,
@@ -943,7 +943,7 @@ const PRODUCTS = [
       "Branco/Preto"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 74,
@@ -962,7 +962,7 @@ const PRODUCTS = [
       "Azul Claro"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 75,
@@ -981,7 +981,7 @@ const PRODUCTS = [
       "Azul/Branco"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 76,
@@ -1000,7 +1000,7 @@ const PRODUCTS = [
       "Cinza"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 77,
@@ -1019,7 +1019,7 @@ const PRODUCTS = [
       "Azul Claro"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 78,
@@ -1038,7 +1038,7 @@ const PRODUCTS = [
       "Cinza"
     ],
     "badge": "PROMOÇÃO",
-    "image": "catalogo_fallback/conjunto.jpg"
+    "image": "conjunto.jpg"
   },
   {
     "id": 79,
