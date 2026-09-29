@@ -1,0 +1,24 @@
+STYLE NEW YORK IMPORTS — VERSÃO ATUALIZADA
+
+CATEGORIAS ATIVAS
+- Conjuntos
+- Jaquetas
+- Camisetas
+- Moletons
+
+PREÇOS PROMOCIONAIS PADRONIZADOS
+- Conjuntos: R$ 119,90 (de R$ 219,90)
+- Jaquetas: R$ 89,90 (de R$ 159,90)
+- Camisetas: R$ 39,90 (de R$ 79,90)
+- Moletons: R$ 69,90 (de R$ 129,90)
+
+FRETE
+- Grátis para todo o Brasil.
+
+COMPRA
+- Toda a seleção, carrinho, Pix e dados de entrega são feitos pela página.
+- Não existe botão de WhatsApp nos produtos.
+- O número de atendimento não é exibido no site.
+- Somente ao final aparece “Enviar comprovante”, direcionando para o Instagram @flownewyork_nyy.
+
+Para editar produtos: script.js -> const PRODUCTS.

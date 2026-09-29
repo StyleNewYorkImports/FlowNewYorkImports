@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StyleNewYork Imports — moda urbana, conjuntos, jaquetas, camisetas e moletons. Frete grátis para todo o Brasil.">
+  <meta name="theme-color" content="#0a0906">
+  <title>StyleNewYork Imports | Moda & Streetwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">
+    <span>STYLE NEW YORK IMPORTS</span>
+    <span>•</span>
+    <span>Loja física em Balneário Camboriú — em frente ao Shopping</span>
+    <span>•</span>
+    <span>Pagamento via Pix</span>
+    <span>•</span>
+    <span>Frete grátis para todo o Brasil</span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">☰</button>
+      <a class="brand" href="#inicio" aria-label="StyleNewYork Imports">
+        <img src="imagensQReLogos/LogoLOja.png" alt="StyleNewYork Imports">
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#inicio">Início</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#promocoes">Promoções</a>
+        <a href="#loja">Loja Física</a>
+      </nav>
+
+      <div class="header-actions">
+        <label class="search">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Buscar produto...">
+        </label>
+        <button class="icon-btn" id="favoritesBtn" aria-label="Favoritos">♡<span class="badge" id="favBadge">0</span></button>
+        <button class="icon-btn" id="cartBtn" aria-label="Carrinho">🛒<span class="badge" id="cartBadge">0</span></button>
+        <button class="icon-btn" id="themeBtn" aria-label="Alternar tema">☾</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-media">
+        <img src="Jaquetas/Jaqueta Lacoste azul.jpeg" alt="" class="hero-image">
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <span class="eyebrow">STYLE NEW YORK IMPORTS</span>
+        <img class="hero-logo" src="imagensQReLogos/LogoLOja.png" alt="StyleNewYork Imports">
+        <h1>Encontre seu estilo.</h1>
+        <p>Streetwear, conjuntos, jaquetas, camisetas e moletons selecionados para quem gosta de presença.</p>
+        <div class="hero-actions">
+          <a href="#produtos" class="btn btn-gold">Ver coleção</a>
+          <a href="#promocoes" class="btn btn-light">Ver ofertas</a>
+        </div>
+        <div class="trust-row">
+          <span>✓ Produtos selecionados</span>
+          <span>✓ Loja física</span>
+          <span>✓ Compra 100% pelo site</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><strong>PIX</strong><span>Pagamento rápido</span></div>
+      <div><strong>FRETE GRÁTIS</strong><span>Para todo o Brasil</span></div>
+      <div><strong>LOJA FÍSICA</strong><span>Balneário Camboriú</span></div>
+      <div><strong>COMPRA ONLINE</strong><span>Finalize direto pela página</span></div>
+    </section>
+
+    <section class="section" id="categorias">
+      <div class="section-heading">
+        <div><span class="eyebrow">EXPLORE</span><h2>Categorias</h2></div>
+        <p>Escolha uma categoria e encontre seu próximo look.</p>
+      </div>
+      <div class="category-grid">
+        <button class="category-card category-conjuntos" data-category="Conjuntos"><span>Conjuntos</span><small>Ver coleção →</small></button>
+        <button class="category-card category-jaquetas" data-category="Jaquetas"><span>Jaquetas</span><small>Ver coleção →</small></button>
+        <button class="category-card category-camisetas" data-category="Camisetas"><span>Camisetas</span><small>Ver coleção →</small></button>
+        <button class="category-card category-moletons" data-category="Moletons"><span>Moletons</span><small>Ver coleção →</small></button>
+        <button class="category-card category-promocoes" data-category="PROMOÇÕES"><span>Promoções</span><small>Ofertas →</small></button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="produtos">
+      <div class="section-heading">
+        <div><span class="eyebrow">COLEÇÃO</span><h2>Encontre seu estilo</h2></div>
+        <p>Produtos organizados por categoria. Clique em um produto para escolher tamanho e cor.</p>
+      </div>
+
+      <div class="filter-wrap" id="filterWrap">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="Conjuntos">Conjuntos</button>
+        <button class="filter-btn" data-filter="Jaquetas">Jaquetas</button>
+        <button class="filter-btn" data-filter="Camisetas">Camisetas</button>
+        <button class="filter-btn" data-filter="Moletons">Moletons</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid"></div>
+      <div class="empty-state hidden" id="emptyState">
+        <div>⌕</div>
+        <h3>Nenhum produto encontrado</h3>
+        <p>Tente outro nome ou escolha outra categoria.</p>
+      </div>
+    </section>
+
+    <section class="promo-banner" id="promocoes">
+      <div>
+        <span class="eyebrow">OFERTAS STYLE NEW YORK</span>
+        <h2>Seu próximo look pode estar aqui.</h2>
+        <p>Produtos selecionados com preço promocional. Os valores podem ser alterados no cadastro de produtos.</p>
+      </div>
+      <button class="btn btn-gold" data-category="PROMOÇÕES">Ver promoções</button>
+    </section>
+
+    <section class="section location-section" id="loja">
+      <div class="location-card">
+        <div class="location-copy">
+          <span class="eyebrow">CONFIANÇA E PRESENÇA</span>
+          <h2>Visite nossa loja física</h2>
+          <p><strong>Balneário Camboriú — em frente ao Shopping.</strong></p>
+          <p>Compre diretamente pela página ou venha conhecer nossos produtos pessoalmente em Balneário Camboriú.</p>
+          <a class="btn btn-gold" href="#produtos">Comprar online</a>
+        </div>
+        <div class="location-visual">
+          <img src="imagensQReLogos/LogoLOja.png" alt="StyleNewYork Imports">
+          <span>STYLE NEW YORK<br>IMPORTS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section benefits-section">
+      <div class="section-heading centered">
+        <span class="eyebrow">STYLE NEW YORK</span>
+        <h2>Uma experiência de compra simples</h2>
+      </div>
+      <div class="benefits-grid">
+        <article><div class="benefit-icon">✦</div><h3>Seleção de produtos</h3><p>Peças organizadas por categoria para você encontrar rapidamente o que procura.</p></article>
+        <article><div class="benefit-icon">◈</div><h3>Pagamento via Pix</h3><p>Faça o pagamento pelo QR Code ou pela chave Pix informada no checkout.</p></article>
+        <article><div class="benefit-icon">♡</div><h3>Compra pelo site</h3><p>Escolha seus produtos, pague via Pix e finalize seus dados de entrega sem sair da página.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img src="imagensQReLogos/LogoLOja.png" class="footer-logo" alt="StyleNewYork Imports">
+        <p>Moda urbana e streetwear. StyleNewYork Imports.</p>
+      </div>
+      <div><h4>NAVEGAÇÃO</h4><a href="#inicio">Início</a><a href="#categorias">Categorias</a><a href="#produtos">Produtos</a><a href="#loja">Loja física</a></div>
+      <div><h4>ATENDIMENTO</h4><a href="mailto:stylenewyorkimports@gmail.com">E-mail</a><span>Balneário Camboriú</span><span>Compra online pelo site</span></div>
+      <div><h4>PAGAMENTO</h4><span>Pix por QR Code</span><span>Chave Pix: stylenewyorkimports@gmail.com</span><span>Frete grátis para todo o Brasil</span></div>
+    </div>
+    <div class="footer-bottom">© 2026 StyleNewYork Imports. Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- CARRINHO -->
+  <div class="overlay" id="cartOverlay"></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Carrinho">
+    <div class="drawer-header"><div><span class="eyebrow">SEU PEDIDO</span><h3>Meu carrinho <span id="cartCountHeader">0</span></h3></div><button class="close-btn" id="closeCartBtn">×</button></div>
+    <div class="drawer-body" id="cartItemsContainer"></div>
+    <div class="drawer-footer">
+      <div class="coupon-row"><input id="couponInput" placeholder="Cupom de desconto"><button id="applyCoupon">Aplicar</button></div>
+      <div class="coupon-message" id="couponMessage"></div>
+      <div class="total-line"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div>
+      <div class="total-line discount-line"><span>Desconto</span><strong id="cartDiscount">- R$ 0,00</strong></div>
+      <div class="total-line"><span>Frete</span><strong>GRÁTIS</strong></div>
+      <div class="total-line grand-total"><span>Total</span><strong id="cartTotalValue">R$ 0,00</strong></div>
+      <button class="btn btn-gold btn-block" id="checkoutBtn">Continuar para pagamento</button>
+    </div>
+  </aside>
+
+  <!-- MODAL PRODUTO -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal product-modal">
+      <button class="close-btn modal-close" data-close="productModal">×</button>
+      <div id="productModalContent"></div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT EM 2 ETAPAS -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal checkout-modal">
+      <button class="close-btn modal-close" data-close="checkoutModal">×</button>
+      <div class="checkout-steps"><span class="step active" data-step="1">1 Pagamento</span><span class="step" data-step="2">2 Entrega</span></div>
+
+      <section id="paymentStep" class="checkout-step">
+        <div class="checkout-title"><span class="eyebrow">PAGAMENTO SEGURO</span><h2>Escolha como pagar</h2><p>Pix ou cartão pelo Checkout Transparente do Mercado Pago. Dados sensíveis do cartão não são armazenados pela loja.</p></div>
+
+        <div class="payment-tabs">
+          <button type="button" class="payment-tab active" data-method="pix">Pix</button>
+          <button type="button" class="payment-tab" data-method="card">Cartão</button>
+        </div>
+
+        <div class="payment-grid">
+          <div>
+            <div id="pixPaymentPanel" class="payment-method-panel active">
+              <div class="pix-card">
+                <h3>Pagamento via Pix</h3>
+                <p class="muted">Escaneie o QR Code:</p>
+                <div class="qr-wrap"><img src="imagensQReLogos/Pix.jpeg" alt="QR Code Pix da StyleNewYork Imports"></div>
+                <strong class="pix-total" id="pixTotalValue">R$ 0,00</strong>
+                <p class="muted small">Chave Pix (e-mail)</p>
+                <div class="pix-key"><input id="pixCodeInput" value="stylenewyorkimports@gmail.com" readonly><button id="copyPixBtn">Copiar</button></div>
+                <p class="pix-security">Frete grátis para todo o Brasil. Depois do pagamento, clique em <b>Já fiz o pagamento</b>.</p>
+              </div>
+            </div>
+
+            <div id="cardPaymentPanel" class="payment-method-panel">
+              <div class="mp-secure-head">
+                <div><strong>Cartão de crédito ou débito</strong><span>Pagamento processado com segurança pelo Mercado Pago</span></div>
+                <span class="secure-pill">🔒 Seguro</span>
+              </div>
+              <div id="cardPaymentBrick_container"></div>
+              <div id="cardPaymentStatus" class="payment-status hidden"></div>
+              <p class="mp-note">Seus dados de cartão são processados pelo Mercado Pago e não ficam armazenados nesta loja.</p>
+            </div>
+          </div>
+
+          <div class="order-summary">
+            <h3>Resumo</h3>
+            <div id="checkoutSummary"></div>
+            <div class="summary-item"><span>Frete</span><b>GRÁTIS</b></div>
+            <div class="summary-total"><span>Total</span><strong id="checkoutTotal">R$ 0,00</strong></div>
+            <button class="btn btn-gold btn-block" id="paidBtn">Já fiz o pagamento Pix →</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="deliveryStep" class="checkout-step hidden">
+        <div class="checkout-title"><span class="eyebrow">ENTREGA</span><h2>Agora, seus dados de entrega</h2><p>Preencha os dados de entrega abaixo para concluir seu pedido.</p></div>
+        <form id="deliveryForm" class="delivery-form">
+          <div class="form-grid">
+            <label>Nome completo<input id="custName" required></label>
+            <label>Telefone para contato<input id="custPhone" required placeholder="(47) 99999-9999"></label>
+            <label>CEP<input id="custCep" required placeholder="00000-000"></label>
+            <label>Cidade / UF<input id="custCity" required placeholder="Balneário Camboriú / SC"></label>
+            <label class="wide">Rua / Avenida<input id="custStreet" required></label>
+            <label>Número<input id="custNum" required></label>
+            <label>Complemento<input id="custComplement" placeholder="Apto, bloco..."></label>
+            <label class="wide">Ponto de referência<input id="custReference" placeholder="Próximo a..."></label>
+          </div>
+          <label class="check-label"><input type="checkbox" id="termsCheck" required> Confirmo que os dados de entrega estão corretos.</label>
+          <button class="btn btn-gold btn-block" type="submit">Enviar comprovante</button>
+          <p class="form-note">Ao finalizar, você será direcionado ao Instagram <strong>@flownewyork_nyy</strong> para enviar o comprovante do Pix.</p>
+        </form>
+      </section>
+    </div>
+  </div>
+
+
+  <div class="lightbox" id="lightbox" aria-label="Imagem ampliada">
+    <button class="close-btn" id="closeLightbox">×</button>
+    <img id="lightboxImage" alt="Imagem ampliada">
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "flownewyork-imports",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Loja FlowNewYork Imports com Checkout Transparente Mercado Pago via Orders API",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "mercadopago": "^2.12.0"
+  }
+}
