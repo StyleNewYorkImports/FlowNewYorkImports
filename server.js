@@ -79,6 +79,20 @@ async function processOrder(req, res) {
       body: JSON.stringify(order)
     });
     const result = await r.json();
+
+    // Diagnóstico seguro no Render: registra somente status/códigos do Mercado Pago.
+    // Nunca registra token, número do cartão, CVV ou dados completos do pagador.
+    const payment = result?.transactions?.payments?.[0] || {};
+    console.log("Mercado Pago order:", {
+      http_status: r.status,
+      order_id: result?.id || null,
+      order_status: result?.status || null,
+      order_status_detail: result?.status_detail || null,
+      payment_status: payment?.status || null,
+      payment_status_detail: payment?.status_detail || null,
+      error_code: result?.code || result?.error || result?.errors?.[0]?.code || result?.cause?.[0]?.code || null
+    });
+
     return sendJson(res, r.status, result);
   } catch (e) {
     console.error("process_order:", e);
